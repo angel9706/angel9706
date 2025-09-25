@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      background-attachment: fixed; 
+     min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #005579;
+      color: white;
+      padding: 20px;
+    }
+    .profile {
+      margin: 20px;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .links {
+      margin: 20px;
+    }
+    .links a {
+      text-decoration: none;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #ff4081;
+      color: white;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    .links a:hover {
+      background: #f50057;
+    }
+    .city-container {
+      margin: 30px auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    .city {
+      background: #ffffff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .city:hover {
+      background: #efdae4;
+    }
+    .city-text {
+      display: none;
+      margin-top: 10px;
+      color: #333;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-5px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Profil Saya</h1>
+  </header>
+
+  <section class="profile">
+    <img src="c:\Users\Sheren Angelin\Downloads\download.jpg" alt="Foto Profil">
+    <h2>Sheren Angelin Wijaya</h2>
+    <p>24416255201120 - IF24D</p>
+  </section>
+
+  <section class="links">
+    <a href="https://ubpkarawang.ac.id" target="_blank">Web Kampus</a>
+    <a href="https://www.instagram.com/yvnangell_06?igsh=OHQzNmVlMDUxMTVj&utm_source=qr" target="_blank">Instagram</a>
+  </section>
+
+  <section class="city-container">
+    <div class="city" onclick="toggleText('Apa yang anda harapkan dari mata kuliah Basis Data?')">
+      Apa yang anda harapkan dari mata kuliah Basis Data?
+      <div id="Apa yang anda harapkan dari mata kuliah Basis Data?" class="city-text">Kalau dari saya, yang saya harapkan dari mata kuliah Basis Data itu bisa benar-benar memahami bagaimana data disimpan, diatur, dan diolah dengan rapi. Saya ingin belajar bukan hanya teorinya saja, tapi juga bagaimana penerapannya secara langsung, misalnya membuat tabel, menghubungkan antar tabel, dan melakukan query untuk mengambil informasi sesuai kebutuhan.
+
+Saya juga berharap mata kuliah ini bisa memberi bekal yang kuat untuk membuat aplikasi atau sistem yang memanfaatkan data, seperti aplikasi keuangan, sistem informasi, atau bahkan toko online sederhana. Dengan begitu, saya tidak hanya tahu cara menggunakan data, tapi juga mengerti cara mengelolanya di balik layar.</div>
+    </div>
+    <div class="city" onclick="toggleText('Apa itu Basis Data?')">
+      Apa itu Basis Data?
+      <div id="Apa itu Basis Data?" class="city-text">Basis data adalah sebuah kumpulan data yang terorganisir dengan cara tertentu agar mudah diakses, dikelola, dan diperbarui. Bayangkan seperti sebuah lemari arsip besar, di mana semua berkas atau dokumen disusun rapi berdasarkan kategori, sehingga ketika kita ingin mencari informasi tertentu, kita bisa menemukannya dengan cepat tanpa harus membuka semua map satu per satu. Dalam dunia komputer, basis data digunakan untuk menyimpan berbagai informasi, mulai dari data mahasiswa di kampus, daftar produk di toko online, hingga transaksi perbankan.
+
+<p> Fungsi utama basis data adalah memastikan data tersimpan dengan aman, konsisten, dan bisa diakses kapan saja oleh orang yang berwenang. Karena dikelola dengan bantuan sistem yang disebut DBMS (Database Management System), kita tidak hanya bisa menyimpan data, tapi juga mengolahnya, seperti menambah, menghapus, atau memperbarui sesuai kebutuhan.</p>
+
+Selain itu, basis data juga membantu mengurangi terjadinya duplikasi data dan menjaga integritas informasi, sehingga apa yang tersimpan benar-benar valid dan bisa dipercaya. Dengan adanya basis data, pengolahan informasi jadi lebih efisien, cepat, dan akurat, apalagi di era digital saat ini ketika jumlah data terus bertambah setiap detik.</div>
+    </div>
+    <div class="city" onclick="toggleText('Apa itu Conceptual DB?')">
+      Apa itu Conceptual DB?
+      <div id="Apa itu Conceptual DB?" class="city-text">Conceptual DB adalah rancangan awal dari basis data yang menjelaskan data apa saja yang perlu disimpan dan bagaimana hubungan antar data tersebut. Pada tahap ini, detail teknis seperti tabel atau kode SQL belum dipikirkan, karena fokusnya hanya pada gambaran umum. Biasanya conceptual DB divisualisasikan dengan ERD, di mana entitas, atribut, dan relasi antar entitas digambarkan secara jelas. Dengan adanya rancangan ini, kebutuhan data bisa lebih mudah dipahami sebelum diterjemahkan ke tahap logis maupun fisik.</div>
+    </div>
+    <div class="city" onclick="toggleText('Apa itu Physical Model?')">
+      Apa itu Physical Model?
+      <div id="Apa itu Physical Model?" class="city-text">Physical Model adalah tahap perancangan basis data yang sudah masuk ke bentuk paling detail dan teknis. Kalau conceptual model hanya sebatas gambaran umum tentang entitas dan hubungan antar data, maka physical model menjelaskan bagaimana rancangan itu benar-benar diimplementasikan di dalam sistem basis data.</div>
+    </div>
+  </section>
+
+  <script>
+    function toggleText(id) {
+      const text = document.getElementById(id);
+      if (text.style.display === "block") {
+        text.style.display = "none";
+      } else {
+        text.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
